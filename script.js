@@ -1,3 +1,4 @@
+//adding html code
 let hr = document.querySelector('#hr');
 let mn = document.querySelector('#mn');
 let sc = document.querySelector('#sc');
