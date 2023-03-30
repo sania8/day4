@@ -3,22 +3,8 @@ body{
     justify-content : center;
     min-height: 100vh;
     align-items: center;
-    background: -webkit-linear-gradient(left, rgba(0, 0, 255, 0.32) , rgba(128, 0, 128, 0.416));
-}
-.container{
-    background:-webkit-linear-gradient(left, rgba(0, 0, 255, 0.32) , rgba(128, 0, 128, 0.416));
-    border-radius : 20px;
-    border-top-left-radius : 225px;
-    border-top-right-radius : 225px;
-    box-shadow : 25px 25px 75px rgba(0,0,0,0.75),
-       inset 5px 5px 10px rgba(0,0,0,0.5),
-       inset 5px 5px 20px rgba(255, 255, 255, 0.2),
-       inset -5px -5px 15px rgba(0,0,0,0.75);
-       display : flex;
-       align-items: center;
-       justify-content: center;
-       flex-direction : column;
-
+    /*background: -webkit-linear-gradient(left, rgba(0, 0, 255, 0.32) , rgba(128, 0, 128, 0.416));*/
+    background-color : rgba(100, 100, 100, 0.358);
 }
 
 .clock{
@@ -26,11 +12,11 @@ position: relative;
 width: 450px;
 height: 450px;
 border-radius: 50%;
-background: -webkit-linear-gradient(left, rgba(0, 0, 255, 0.32) , rgba(128, 0, 128, 0.416));
-box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
-    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-    inset 5px 5px 20px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+border: 2px solid rgba(255,255,255,0.5);
+/*background: -webkit-linear-gradient(left, rgba(0, 0, 255, 0.32) , rgba(128, 0, 128, 0.416));*/
+box-shadow: 50px 50px 240px rgba(0,0,0,0.8),
+      inset 5px 5px 9px rgba(255,255,255,0.75),
+      inset -5px -5px 20px rgba(0,0,0,0.9);
     display : flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +28,7 @@ margin-bottom : 30px;
     width : 10px;
     height: 10px;
     border-radius :50%;
-    border : 2px solid rgba(0, 0, 0, 0.75);
+    border : 10px solid rgba(0, 0, 0, 0.297);
     background: -webkit-linear-gradient( rgba(94, 0, 128, 0.233) , rgba(94, 0, 128, 0.233)),
       inset 5px 5px 10px rbga(0,0,0,0,75);
       z-index: 100000;
@@ -53,13 +39,15 @@ margin-bottom : 30px;
     position: absolute;
     text-align: center;
     inset: 10px;
-    color :rgba(0, 0, 0, 0.75);
+    color :black;
     transform:  rotate(calc(30deg * var(--i)));
+    
 }
 .clock span b{
     font-weight: 15;
     display : inline-block;
     font-size : 2em;
+    
     transform:  rotate(calc(-30deg * var(--i)));
 }
 .circle{
@@ -99,6 +87,7 @@ margin-bottom : 30px;
     width : 200px;
     height: 200px;
     z-index:9;
+
 }
 .circle::before{
     content:'';
@@ -113,16 +102,19 @@ margin-bottom : 30px;
 }
 /*digital clock*/
 #time{
-    margin-bottom :20px;
+    margin-bottom :40px;
+    justify-content: center;
+   
+
     display : flex;
     padding: 10px 20px;
     font-weight:300;
     font-size: 2em;
-    border : 2px solid rgba(0,0,0,0.5);
+    border: 2px solid white;
     border-radius:40px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5),
-      inset 5px 5px 20px rgba(255,255,255,0.2),
-      inset -5px -5px 15px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 120px rgba(0,0,0,0.5),
+      inset 5px 5px 40px rgba(255,255,255,0.2),
+      inset -5px -5px 20px rgba(0,0,0,0.75);
 
 }
 #time div{
@@ -132,6 +124,7 @@ margin-bottom : 30px;
     justify-content: center;
     font-weight : 500;
     color : var(--clr);
+ 
 }
 #time div:nth-child(1)::after,
 #time div:nth-child(2)::after{
@@ -146,7 +139,7 @@ margin-bottom : 30px;
     display : flex;
     justify-content : center;
     align-items : center;
-    color :white;
+    color :black;
     font-weight: 600;
 }
 #time div:nth-child(2)::after{
